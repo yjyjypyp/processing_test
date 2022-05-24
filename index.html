@@ -15,6 +15,31 @@
     <script type="text/processing">
 
     /* PUT YOUR CODE HERE */
+        PImage img;
+        PImage hand;
+
+        void setup() {
+          size(720, 1080);
+          background(250);
+          img = loadImage("IMG_7219.jpg");
+          image(img, -162, -200, 1008, 1344);
+
+          hand = loadImage("hand.png");
+          image(hand, -162, -200, 1008, 1344);
+          imageMode(CENTER);
+        }
+
+        //every frame, it's activated
+        void draw() {
+          if (mousePressed == true) {
+          image(hand, mouseX,mouseY, 1008,1344);
+
+          fill(0);
+          rect(mouseX, mouseY, 20, 20);
+          }
+         }
+
+
 
 
     </script>
